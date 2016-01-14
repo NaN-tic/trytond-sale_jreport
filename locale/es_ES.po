@@ -1,26 +1,90 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.configuration,sale_qty_decimal:"
+msgid "Sale Qty Decimal"
+msgstr "Decimal de Cant. en venta"
+
+msgctxt "field:sale.configuration.company,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:sale.configuration.company,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:sale.configuration.company,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:sale.configuration.company,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:sale.configuration.company,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.configuration.company,sale_qty_decimal:"
+msgid "Sale Qty Decimal"
+msgstr "Decimal de Cant. en venta"
+
+msgctxt "field:sale.configuration.company,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:sale.configuration.company,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "help:sale.configuration,sale_qty_decimal:"
+msgid "Show qty with or without decimals"
+msgstr "Mostrar la Cant. con o sin decimales"
 
 msgctxt "jasper:sale.sale:"
 msgid "Carrier"
 msgstr "Mensajero"
 
 msgctxt "jasper:sale.sale:"
+msgid "DISC"
+msgstr "Desc."
+
+msgctxt "jasper:sale.sale:"
 msgid "Date"
 msgstr "Fecha"
+
+msgctxt "jasper:sale.sale:"
+msgid "Description"
+msgstr "Descripción"
 
 msgctxt "jasper:sale.sale:"
 msgid "Discount"
 msgstr "Descuento"
 
 msgctxt "jasper:sale.sale:"
-msgid "DISC"
-msgstr "Desc."
+msgid "Email"
+msgstr "Email"
 
 msgctxt "jasper:sale.sale:"
-msgid "Description"
-msgstr "Descripción"
+msgid "Fax"
+msgstr "Fax"
+
+msgctxt "jasper:sale.sale:"
+msgid "Mobile"
+msgstr "Móvil"
+
+msgctxt "jasper:sale.sale:"
+msgid "Payment Term"
+msgstr "Plazo de pago"
+
+msgctxt "jasper:sale.sale:"
+msgid "Payment Type"
+msgstr "Tipo de pago"
+
+msgctxt "jasper:sale.sale:"
+msgid "Phone"
+msgstr "Teléfono"
 
 msgctxt "jasper:sale.sale:"
 msgid "Price"
@@ -33,14 +97,6 @@ msgstr "Cant."
 msgctxt "jasper:sale.sale:"
 msgid "Quotation"
 msgstr "Presupuesto"
-
-msgctxt "jasper:sale.sale:"
-msgid "Payment Term"
-msgstr "Plazo de pago"
-
-msgctxt "jasper:sale.sale:"
-msgid "Payment Type"
-msgstr "Tipo de pago"
 
 msgctxt "jasper:sale.sale:"
 msgid "Sale Order"
@@ -59,25 +115,13 @@ msgid "Tax"
 msgstr "Impuestos"
 
 msgctxt "jasper:sale.sale:"
-msgid "Untaxed"
-msgstr "Base imponible"
-
-msgctxt "jasper:sale.sale:"
 msgid "Total"
 msgstr "Total"
 
 msgctxt "jasper:sale.sale:"
-msgid "Email"
-msgstr "Email"
+msgid "Untaxed"
+msgstr "Base imponible"
 
-msgctxt "jasper:sale.sale:"
-msgid "Phone"
-msgstr "Teléfono"
-
-msgctxt "jasper:sale.sale:"
-msgid "Mobile"
-msgstr "Móvil"
-
-msgctxt "jasper:sale.sale:"
-msgid "Fax"
-msgstr "Fax"
+msgctxt "model:sale.configuration.company,name:"
+msgid "Sale Configuration per Company"
+msgstr "Configuración de venta por compañía"

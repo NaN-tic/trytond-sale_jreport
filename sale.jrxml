@@ -2,12 +2,13 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sale" language="i18ngroovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="797f10e7-0b3e-4c35-9d66-a649d6b4a5ef">
 	<property name="ireport.zoom" value="1.4641000000000013"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="234"/>
+	<property name="ireport.y" value="0"/>
 	<property name="TRYTON_RELATIONS" value="[&apos;lines&apos;]"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TAXES_DS" class="java.lang.Object"/>
+	<parameter name="sale_qty_decimal" class="java.lang.Boolean"/>
 	<queryString language="xPath">
 		<![CDATA[]]>
 	</queryString>
@@ -46,9 +47,6 @@
 	</field>
 	<field name="company-footer" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/footer-footer]]></fieldDescription>
-	</field>
-	<field name="company-sale_qty" class="java.lang.Boolean">
-		<fieldDescription><![CDATA[/data/record/company-company/sale_qty-sale_qty]]></fieldDescription>
 	</field>
 	<field name="party-full_name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/party-party/full_name-full_name]]></fieldDescription>
@@ -140,7 +138,7 @@
 	<field name="currency-symbol" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/currency-currency/symbol-symbol]]></fieldDescription>
 	</field>
-	<field name="line-quantity" class="java.lang.String">
+	<field name="line-quantity" class="java.lang.Double">
 		<fieldDescription><![CDATA[/data/record/lines-lines/quantity-quantity]]></fieldDescription>
 	</field>
 	<field name="line-description" class="java.lang.String">
@@ -155,7 +153,7 @@
 	<field name="line-note" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/lines-lines/note-note]]></fieldDescription>
 	</field>
-	<field name="line-discount" class="java.lang.Number">
+	<field name="line-discount" class="java.lang.Double">
 		<fieldDescription><![CDATA[/data/record/lines-lines/discount-discount]]></fieldDescription>
 	</field>
 	<field name="line-type" class="java.lang.String">
@@ -464,7 +462,11 @@
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-amount} ? $F{line-amount} : 0]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-amount}
+?
+    $F{line-amount}
+:
+    0]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
 				<reportElement x="461" y="2" width="26" height="12" uuid="9651a8d5-b008-412f-bdeb-15a4634ed622">
@@ -473,7 +475,11 @@
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-discount} ? "-"+ (int)Double.valueOf($F{line-discount}*100).doubleValue()+"%" : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-discount}
+?
+    "-" + String.format("%.2f", ($F{line-discount}*100)) + "%"
+:
+    ""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="16" y="2" width="40" height="12" uuid="845e3c2f-289f-4749-be42-e03b42c5ab6c">
@@ -482,7 +488,15 @@
 				<textElement textAlignment="Center">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-quantity} ? $F{company-sale_qty} ? (int)Double.valueOf($F{line-quantity}.trim()).doubleValue() : Double.valueOf($F{line-quantity}.trim()).doubleValue() : '0']]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-quantity} != null && $F{line-quantity} != ""
+?
+    $P{sale_qty_decimal} == true
+    ?
+        String.format("%.2f", $F{line-quantity})
+    :
+        String.valueOf($F{line-quantity}).split("\\.")[0]
+:
+    ""]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
