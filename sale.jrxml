@@ -102,8 +102,8 @@
 	<field name="payment_type-note" class="java.lang.Object">
 		<fieldDescription><![CDATA[/data/record/payment_type-payment_type/note-note]]></fieldDescription>
 	</field>
-	<field name="invoice-full_address_lang" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/invoice_address-invoice_address/full_address_lang-full_address_lang]]></fieldDescription>
+	<field name="invoice_full_address" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/invoice_address/full_address]]></fieldDescription>
 	</field>
 	<field name="shippment-full_address_lang" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/shipment_address-shipment_address/full_address_lang-full_address_lang]]></fieldDescription>
@@ -212,7 +212,7 @@
 					<textElement markup="styled">
 						<font size="9"/>
 					</textElement>
-					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{invoice-full_address_lang}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{invoice_full_address}]]></textFieldExpression>
 				</textField>
 				<line>
 					<reportElement x="305" y="72" width="240" height="1" uuid="5c37cf37-8f6b-4cdf-9f6c-b4bb87300966"/>
@@ -428,37 +428,27 @@
 	</pageHeader>
 	<detail>
 		<band height="19" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="16" y="2" width="474" height="12" uuid="a68e49fc-dca2-48bf-a369-91523da21914">
-					<printWhenExpression><![CDATA[$F{line-type} == "title" || $F{line-type} == "comment" || $F{line-type} == "subtotal"]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Left" markup="styled">
-					<font size="9"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{line-note} ? $F{line-description}+"\n<style forecolor=\"#808080\">"+$F{line-note}+"</style>" : $F{line-description}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="57" y="2" width="347" height="12" uuid="fee4defc-7102-4a87-85a6-b9e0e5c7c74f">
-					<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
-				</reportElement>
+				<reportElement x="57" y="2" width="347" height="12" uuid="fee4defc-7102-4a87-85a6-b9e0e5c7c74f"/>
 				<textElement markup="styled">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-note} ? $F{line-description}+"\n<style forecolor=\"#808080\">"+$F{line-note}+"</style>" : $F{line-description}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-note}
+?
+    $F{line-description} + "\n<style forecolor=\"#808080\">   " + $F{line-note} + "</style>"
+:
+    $F{line-description}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
-				<reportElement x="407" y="2" width="50" height="12" uuid="52becf9f-b17b-495a-a978-e06b601c8c55">
-					<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
-				</reportElement>
+				<reportElement x="407" y="2" width="50" height="12" uuid="52becf9f-b17b-495a-a978-e06b601c8c55"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gross_unit_price-gross_unit_price} ? $F{gross_unit_price-gross_unit_price} : $F{line-unit_price} ? $F{line-unit_price} : 0]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
-				<reportElement x="490" y="2" width="50" height="12" uuid="fba565ed-db97-4242-91ca-cece0bfef0c1">
-					<printWhenExpression><![CDATA[$F{line-type} == "line" || $F{line-type} == "subtotal"]]></printWhenExpression>
-				</reportElement>
+				<reportElement x="490" y="2" width="50" height="12" uuid="fba565ed-db97-4242-91ca-cece0bfef0c1"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
@@ -469,9 +459,7 @@
     0]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement x="461" y="2" width="26" height="12" uuid="9651a8d5-b008-412f-bdeb-15a4634ed622">
-					<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
-				</reportElement>
+				<reportElement x="461" y="2" width="26" height="12" uuid="9651a8d5-b008-412f-bdeb-15a4634ed622"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
@@ -482,9 +470,7 @@
     ""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="16" y="2" width="40" height="12" uuid="845e3c2f-289f-4749-be42-e03b42c5ab6c">
-					<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
-				</reportElement>
+				<reportElement x="16" y="2" width="40" height="12" uuid="845e3c2f-289f-4749-be42-e03b42c5ab6c"/>
 				<textElement textAlignment="Center">
 					<font size="9"/>
 				</textElement>
@@ -497,6 +483,33 @@
         String.valueOf($F{line-quantity}).split("\\.")[0]
 :
     ""]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{line-type} == "title" || $F{line-type} == "comment" || $F{line-type} == "subtotal"]]></printWhenExpression>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="16" y="2" width="474" height="12" uuid="a68e49fc-dca2-48bf-a369-91523da21914"/>
+				<textElement textAlignment="Left" markup="styled">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line-note}
+?
+    $F{line-description} + "\n<style forecolor=\"#808080\">   " + $F{line-note} + "</style>"
+:
+    $F{line-description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="490" y="2" width="50" height="12" uuid="ca59295e-1263-46b4-ae38-791a4be9428b">
+					<printWhenExpression><![CDATA[$F{line-type} == "subtotal"]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line-amount}
+?
+    $F{line-amount}
+:
+    0]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

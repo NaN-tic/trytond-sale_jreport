@@ -20,7 +20,7 @@ class SaleReport(JasperReport):
             'sale_qty_decimal': config.sale_qty_decimal
             }
         if 'parameters' in data:
-            data['parameters'] += parameters
+            data['parameters'].update(parameters)
         else:
             data['parameters'] = parameters
         return super(SaleReport, cls).execute(ids, data)
