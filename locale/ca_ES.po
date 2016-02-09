@@ -42,83 +42,83 @@ msgctxt "help:sale.configuration,sale_qty_decimal:"
 msgid "Show qty with or without decimals"
 msgstr "Mostra la Qt. amb decimals o sense"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Carrier"
 msgstr "Missatger"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "DISC"
 msgstr "Disc."
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Date"
 msgstr "Data"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Description"
 msgstr "Descripció"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Discount"
 msgstr "Descompte"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Email"
 msgstr "Email"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Fax"
 msgstr "Fax"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Mobile"
 msgstr "Mòbil"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Payment Term"
 msgstr "Termini pagament"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Payment Type"
 msgstr "Tipus de pagament"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Phone"
 msgstr "Telèfon"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Price"
 msgstr "Preu"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Qty"
 msgstr "Qt."
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Quotation"
 msgstr "Pressupost"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Sale Order"
 msgstr "Comanda venda"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Salesman"
 msgstr "Comercial"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Shipment Address"
 msgstr "Adreça enviament"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Tax"
 msgstr "Imposts"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Total"
 msgstr "Total"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "jasper:sale.sale.jreport:"
 msgid "Untaxed"
 msgstr "Base imposable"
 

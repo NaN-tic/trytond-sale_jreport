@@ -9,7 +9,7 @@ __metaclass__ = PoolMeta
 
 
 class SaleReport(JasperReport):
-    __name__ = 'sale.sale'
+    __name__ = 'sale.sale.jreport'
 
     @classmethod
     def execute(cls, ids, data):
