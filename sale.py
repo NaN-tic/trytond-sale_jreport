@@ -17,7 +17,7 @@ class SaleReport(JasperReport):
         Config = pool.get('sale.configuration')
         config = Config(1)
         parameters = {
-            'sale_qty_decimal': config.sale_qty_decimal
+            'sale_qty_decimal': config.sale_qty_decimal or False
             }
         if 'parameters' in data:
             data['parameters'].update(parameters)
