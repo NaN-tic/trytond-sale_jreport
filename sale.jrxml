@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sale" language="i18ngroovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="797f10e7-0b3e-4c35-9d66-a649d6b4a5ef">
 	<property name="ireport.zoom" value="1.4641000000000013"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="46"/>
+	<property name="ireport.y" value="23"/>
 	<property name="TRYTON_RELATIONS" value="[&apos;lines&apos;]"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
@@ -112,6 +112,9 @@
 	</field>
 	<field name="carrier-rec_name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/carrier-carrier/rec_name-rec_name]]></fieldDescription>
+	</field>
+	<field name="number-number" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/number-number]]></fieldDescription>
 	</field>
 	<field name="reference-reference" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
@@ -234,7 +237,7 @@
 					<textElement textAlignment="Left">
 						<font size="12" isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[($F{state-state}.equals("quotation") || $F{state-state}.equals("draft")) ? tr($V{L},"Quotation")+" "+$F{reference-reference} : tr($V{L},"Sale Order")+" "+$F{reference-reference}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{state-state}.equals("quotation") || $F{state-state}.equals("draft")) ? tr($V{L},"Quotation")+" "+$F{number-number} : tr($V{L},"Sale Order")+" "+$F{number-number}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="10" y="22" width="228" height="12" uuid="26e6798f-861a-4c79-87d9-3a4c69a4afb3">
