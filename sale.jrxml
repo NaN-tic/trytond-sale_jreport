@@ -220,7 +220,7 @@
 					<textElement markup="styled">
 						<font size="9"/>
 					</textElement>
-					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{invoice-full_address_lang}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{invoice-full_address_lang}.replaceAll("&","&amp;")]]></textFieldExpression>
 				</textField>
 				<line>
 					<reportElement x="305" y="72" width="240" height="1" uuid="5c37cf37-8f6b-4cdf-9f6c-b4bb87300966"/>
