@@ -1,83 +1,83 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "report:sale.sale:"
 msgid "Carrier"
-msgstr "Missatger"
+msgstr "Transportadora"
+
+msgctxt "report:sale.sale:"
+msgid "DISC"
+msgstr "Desc."
 
 msgctxt "report:sale.sale:"
 msgid "Date"
 msgstr "Data"
 
 msgctxt "report:sale.sale:"
-msgid "Discount"
-msgstr "Descompte"
-
-msgctxt "report:sale.sale:"
-msgid "DISC"
-msgstr "Disc."
-
-msgctxt "report:sale.sale:"
 msgid "Description"
-msgstr "Descripció"
+msgstr "Descrição"
 
 msgctxt "report:sale.sale:"
-msgid "Price"
-msgstr "Preu"
-
-msgctxt "report:sale.sale:"
-msgid "Qty"
-msgstr "Qt."
-
-msgctxt "report:sale.sale:"
-msgid "Quotation"
-msgstr "Pressupost"
-
-msgctxt "report:sale.sale:"
-msgid "Payment Term"
-msgstr "Termini pagament"
-
-msgctxt "report:sale.sale:"
-msgid "Payment Type"
-msgstr "Tipus de pagament"
-
-msgctxt "report:sale.sale:"
-msgid "Sale Order"
-msgstr "Comanda venda"
-
-msgctxt "report:sale.sale:"
-msgid "Salesman"
-msgstr "Comercial"
-
-msgctxt "report:sale.sale:"
-msgid "Shipment Address"
-msgstr "Adreça enviament"
-
-msgctxt "report:sale.sale:"
-msgid "Tax"
-msgstr "Imposts"
-
-msgctxt "report:sale.sale:"
-msgid "Untaxed"
-msgstr "Base imposable"
-
-msgctxt "report:sale.sale:"
-msgid "Total"
-msgstr "Total"
+msgid "Discount"
+msgstr "Desconto"
 
 msgctxt "report:sale.sale:"
 msgid "Email"
 msgstr "Email"
 
 msgctxt "report:sale.sale:"
-msgid "Phone"
-msgstr "Telèfon"
+msgid "Fax"
+msgstr "Fax"
 
 msgctxt "report:sale.sale:"
 msgid "Mobile"
-msgstr "Mòbil"
+msgstr "Telemóvel"
 
 msgctxt "report:sale.sale:"
-msgid "Fax"
-msgstr "Fax"
+msgid "Payment Term"
+msgstr "Prazo de pagamento"
+
+msgctxt "report:sale.sale:"
+msgid "Payment Type"
+msgstr "Tipo de pagamento"
+
+msgctxt "report:sale.sale:"
+msgid "Phone"
+msgstr "Telefone"
+
+msgctxt "report:sale.sale:"
+msgid "Price"
+msgstr "Preço"
+
+msgctxt "report:sale.sale:"
+msgid "Qty"
+msgstr "Quant."
+
+msgctxt "report:sale.sale:"
+msgid "Quotation"
+msgstr "Orçamento"
+
+msgctxt "report:sale.sale:"
+msgid "Sale Order"
+msgstr "Ordem de venda"
+
+msgctxt "report:sale.sale:"
+msgid "Salesman"
+msgstr "Vendedor"
+
+msgctxt "report:sale.sale:"
+msgid "Shipment Address"
+msgstr "Endereço para envio"
+
+msgctxt "report:sale.sale:"
+msgid "Tax"
+msgstr "Imposto"
+
+msgctxt "report:sale.sale:"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "report:sale.sale:"
+msgid "Untaxed"
+msgstr "Sub-Total"

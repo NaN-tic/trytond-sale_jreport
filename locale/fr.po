@@ -2,62 +2,62 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Carrier"
 msgstr "Transporteur"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Date"
 msgstr "Date"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "DISC"
 msgstr "Remise"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Description"
 msgstr "Description"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Price"
 msgstr "Prix"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Qty"
 msgstr "Qté."
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Quotation"
 msgstr "Devis"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Payment Term"
 msgstr "Conditions de paiement"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Payment Type"
 msgstr "Mode de paiement"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Sale Order"
 msgstr "Odre de vente"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Salesman"
 msgstr "Commercial"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Shipment Address"
 msgstr "Adresse de livraison"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Tax"
 msgstr "Taxes"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Untaxed"
 msgstr "Hors taxe"
 
-msgctxt "jasper:sale.sale:"
+msgctxt "report:sale.sale:"
 msgid "Total"
 msgstr "Total"
