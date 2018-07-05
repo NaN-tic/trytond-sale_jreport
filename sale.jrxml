@@ -146,6 +146,9 @@
 	<field name="line-quantity" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/lines-lines/quantity-quantity]]></fieldDescription>
 	</field>
+	<field name="line-product" class="java.lang.Object">
+		<fieldDescription><![CDATA[/data/record/lines-lines/product-product/rec_name-rec_name]]></fieldDescription>
+	</field>
 	<field name="line-description" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/lines-lines/description-description]]></fieldDescription>
 	</field>
@@ -459,7 +462,7 @@
 				<textElement markup="styled">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-note} ? $F{line-description}+"\n<style forecolor=\"#808080\">"+$F{line-note}+"</style>" : $F{line-description}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-note} ? ($F{line-description} ? $F{line-description} : $F{line-product}.get($F{party-lang}))+"\n<style forecolor=\"#808080\">"+$F{line-note}+"</style>" : ($F{line-description} ? $F{line-description} : $F{line-product}.get($F{party-lang}))]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
 				<reportElement x="407" y="2" width="50" height="12" uuid="52becf9f-b17b-495a-a978-e06b601c8c55">
