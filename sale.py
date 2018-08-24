@@ -7,6 +7,5 @@ from trytond.modules.jasper_reports.jasper import JasperReport
 __all__ = ['SaleReport']
 
 
-class SaleReport(JasperReport):
-    __metaclass__ = PoolMeta
+class SaleReport(JasperReport, metaclass=PoolMeta):
     __name__ = 'sale.sale'
