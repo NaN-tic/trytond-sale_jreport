@@ -21,7 +21,10 @@
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/name-name]]></fieldDescription>
 	</field>
 	<field name="company-vat_code" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/company-company/party-party/vat_code-vat_code]]></fieldDescription>
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/tax_identifier-tax_identifier/code-code]]></fieldDescription>
+	</field>
+	<field name="company-identifier" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/identifier_code-identifier_code]]></fieldDescription>
 	</field>
 	<field name="company-phone" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/phone-phone]]></fieldDescription>
@@ -540,7 +543,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{company-vat_code}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{company-vat_code} ? $F{company-vat_code} : $F{company-identifier}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement x="9" y="73" width="535" height="10" isRemoveLineWhenBlank="true" forecolor="#808080" uuid="e5d664fa-1a05-49ca-8267-3e7d08009c64"/>
