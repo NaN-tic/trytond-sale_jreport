@@ -14,8 +14,8 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
 
         <record model="ir.action.report" id="sale_discount.report_sale">
             <field name="name">Sale</field>
-            <field name="model">sale.sale.discount</field>
-            <field name="report_name">sale.sale</field>
+            <field name="model">sale.sale</field>
+            <field name="report_name">sale.sale.discount</field>
             <field name="report">sale_jreport/sale.jrxml</field>
             <field name="extension">pdf</field>
             <field name="template_extension">jrxml</field>
