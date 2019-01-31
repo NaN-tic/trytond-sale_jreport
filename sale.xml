@@ -9,7 +9,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="report_name">sale.sale</field>
             <field name="report">sale_jreport/sale.jrxml</field>
             <field name="extension">pdf</field>
-            <field name="template_extension">odt</field>
+            <field name="template_extension">jrxml</field>
         </record>
     </data>
     <data depends="sale_discount">
@@ -19,9 +19,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="report_name">sale.sale</field>
             <field name="report">sale_jreport/sale.jrxml</field>
             <field name="extension">pdf</field>
-            <field name="template_extension">odt</field>
+            <field name="template_extension">jrxml</field>
         </record>
     </data>
 </tryton>
-
-
