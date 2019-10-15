@@ -147,7 +147,7 @@
 	<field name="currency-symbol" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/currency-currency/symbol-symbol]]></fieldDescription>
 	</field>
-	<field name="line-quantity" class="java.lang.String">
+	<field name="line-quantity" class="java.lang.Number">
 		<fieldDescription><![CDATA[/data/record/lines-lines/quantity-quantity]]></fieldDescription>
 	</field>
 	<field name="line-product" class="java.lang.Object">
@@ -498,14 +498,14 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{line-discount} ? "-"+ (int)Double.valueOf($F{line-discount}*100).doubleValue()+"%" : ""]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00#;#,-##0.00#" isBlankWhenNull="true">
 				<reportElement x="16" y="2" width="40" height="12" uuid="845e3c2f-289f-4749-be42-e03b42c5ab6c">
 					<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-quantity} ? $F{company-sale_qty} ? (int)Double.valueOf($F{line-quantity}.trim()).doubleValue() : Double.valueOf($F{line-quantity}.trim()).doubleValue() : '0']]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-quantity} ? $F{company-sale_qty} ? (int)$F{line-quantity}+"" : $F{line-quantity} : '0']]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
