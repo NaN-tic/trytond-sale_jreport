@@ -33,8 +33,8 @@
 	<field name="company-email" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/email-email]]></fieldDescription>
 	</field>
-	<field name="company-zip" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/zip-zip]]></fieldDescription>
+	<field name="company-postal_code" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/postal_code-postal_code]]></fieldDescription>
 	</field>
 	<field name="company-street" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/street-street]]></fieldDescription>
@@ -63,8 +63,8 @@
 	<field name="party-street" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/party-party/addresses-addresses/street-street]]></fieldDescription>
 	</field>
-	<field name="party-zip" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/party-party/addresses-addresses/zip-zip]]></fieldDescription>
+	<field name="party-postal_code" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/party-party/addresses-addresses/postal_code-postal_code]]></fieldDescription>
 	</field>
 	<field name="party-city" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/party-party/addresses-addresses/city-city]]></fieldDescription>
@@ -533,7 +533,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{company-zip}+" "+$F{company-city}+" "+$F{company-country}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{company-postal_code}+" "+$F{company-city}+" "+$F{company-country}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="10" y="17" width="304" height="11" forecolor="#808080" uuid="e87189f0-5563-4d12-a6f4-0da49045bf39"/>
